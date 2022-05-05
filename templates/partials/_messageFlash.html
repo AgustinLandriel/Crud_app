@@ -1,0 +1,9 @@
+<!-- Se lee como ' con la variable mensaje obtener los msj flash' -->
+<!-- ---------------- -->
+
+{% with messages = get_flashed_messages() %} {% if messages %} {% for msg in
+messages %}
+
+<div class="alert alert-success" role="alert">{{ msg }}</div>
+
+{% endfor %} {% endif %} {% endwith %}
