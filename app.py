@@ -1,12 +1,12 @@
 from flask import Flask
 from routes.contacts import contacts
 from flask_sqlalchemy import SQLAlchemy
-from config import conexionDatabase
+from config import conexionDatabase, key
 
 # En este modulo configuramos la variable de entorno
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "clave312125315123"
+app.config["SECRET_KEY"] = key
 app.config["SQLALCHEMY_DATABASE_URI"] = conexionDatabase
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
